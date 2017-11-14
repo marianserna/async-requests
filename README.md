@@ -35,4 +35,8 @@ Status Code:200 OK
 <!-- What are the values in the "Type" and "Initiator" columns? Compare these values to Step 0. -->
 
 xhr
-jquery.min.js:4	
+jquery.min.js:4
+
+<!-- Click on the request. This displays a detailed view of this one request. Investigate the "Response" and "Preview" sub-tabs. What was the content of the response? -->
+
+Wow what a ride! I came all the way from the server!
