@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   pingButton.addEventListener('click', () => {
     $.ajax({
-      url: 'http://first-ajax-api.herokuapp.com/ping',
+      url: 'http://first-ajax-api.herokuapp.com/pong',
       method: 'get',
       data: {},
       dataType: 'text'
@@ -24,6 +24,10 @@ document.addEventListener("DOMContentLoaded", function() {
       const el = document.createElement('p');
       el.innerText = responseData;
       section.appendChild(el);
+    }).fail(() => {
+      const msg = document.createElement('p');
+      msg.innerText = 'Something went wrong user. Please try again later! xoxo';
+      section.appendChild(msg);
     })
   });
 

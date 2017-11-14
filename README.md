@@ -40,3 +40,7 @@ jquery.min.js:4
 <!-- Click on the request. This displays a detailed view of this one request. Investigate the "Response" and "Preview" sub-tabs. What was the content of the response? -->
 
 Wow what a ride! I came all the way from the server!
+
+<!-- Modify your AJAX request so that it points to the /pong url. Note that it's now p-o-n-g not p-i-n-g. This will simulate a server error. What is the new HTTP status code? -->
+
+GET http://first-ajax-api.herokuapp.com/pong 500 (Internal Server Error)
