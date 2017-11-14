@@ -44,3 +44,16 @@ Wow what a ride! I came all the way from the server!
 <!-- Modify your AJAX request so that it points to the /pong url. Note that it's now p-o-n-g not p-i-n-g. This will simulate a server error. What is the new HTTP status code? -->
 
 GET http://first-ajax-api.herokuapp.com/pong 500 (Internal Server Error)
+
+<!-- Switch back and forth between the /ping and /pong URLs, reloading the page and running your request each time. What do you see in your Developer Tools? What messages show up in your console? -->
+
+Hey the request finished!
+
+OR:
+
+jquery.min.js:4 GET http://first-ajax-api.herokuapp.com/pong 500 (Internal Server Error)
+send @ jquery.min.js:4
+ajax @ jquery.min.js:4
+pingButton.addEventListener @ ajax.js:17
+ajax.js:32 Hey the request finished!
+jquery.min.js:4 XHR failed loading: GET "http://first-ajax-api.herokuapp.com/pong".
