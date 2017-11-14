@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
       const msg = document.createElement('p');
       msg.innerText = 'Something went wrong user. Please try again later! xoxo';
       section.appendChild(msg);
+    }).always(() => {
+      console.log('Hey the request finished!');
     })
   });
 
