@@ -3,9 +3,11 @@ document.addEventListener("DOMContentLoaded", function() {
   const pingButton = document.getElementById('ping');
   const countButton = document.getElementById('count');
   const timeButton = document.getElementById('time');
+  const carButton = document.getElementById('car');
 
   const pingSection = document.getElementById('step3456');
   const countSection = document.getElementById('step7');
+  const carSection = document.getElementById('step9');
 
   ajaxButton.addEventListener('click', () => {
     $.ajax({
@@ -61,6 +63,19 @@ document.addEventListener("DOMContentLoaded", function() {
       const timezome = document.createElement('p');
       timezome.innerText = `${responseData}`;
       countSection.appendChild(timezome);
+    })
+  });
+
+  carButton.addEventListener('click', () => {
+    $.ajax({
+      url: 'http://first-ajax-api.herokuapp.com/a_car',
+      method: 'get',
+      dataType: 'html'
+    }).done((responseData) => {
+      const list = document.createElement('ul');
+      list.setAttribute('id', 'list-section');
+      list.innerHTML = `${responseData}`;
+      carSection.appendChild(list);
     })
   });
 });
