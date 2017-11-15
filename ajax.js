@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const ajaxButton = document.getElementById('ajax');
   const pingButton = document.getElementById('ping');
   const countButton = document.getElementById('count');
+  const timeButton = document.getElementById('time');
 
   const pingSection = document.getElementById('step3456');
   const countSection = document.getElementById('step7');
@@ -45,6 +46,21 @@ document.addEventListener("DOMContentLoaded", function() {
       const num = document.createElement('p');
       num.innerText = `${responseData}`;
       countSection.appendChild(num);
+    })
+  });
+
+  timeButton.addEventListener('click', () => {
+    $.ajax({
+      url: 'http://first-ajax-api.herokuapp.com/time',
+      method: 'get',
+      data: {
+        timezone: 'America/Mexico_City'
+      },
+      dataType: 'text'
+    }).done((responseData) => {
+      const timezome = document.createElement('p');
+      timezome.innerText = `${responseData}`;
+      countSection.appendChild(timezome);
     })
   });
 });
